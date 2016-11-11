@@ -49,10 +49,10 @@ class OpenGraph(object):
             if og.has_attr('content'):
                 self.__data__[og['property'][3:]] = og['content']
                 
-     def get(self, name, default=''):
+    def get(self, name, default=''):
         try:
             value = self.__getattr__(name)
         except AttributeError:
             value = default
-            
+
         return value
